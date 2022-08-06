@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, Navigate } from 'react-router-dom';
+
+//Hooks
+import {useEffect, useState} from 'react';
+
+//Pages
+import Login from './components/Login'
+import Dashboard from './components/Dashboard'
+import SignUp from './components/SignUp'
+import { useSelector } from 'react-redux';
+
+//Routes
+import { ProtectedRoute } from './routes/ProtectedRoute';
+import { getCookie } from './utils/helpers/auth';
+
 
 function App() {
+  const { user } = useSelector((states) => states);
+  const token = getCookie('token');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        {/* <Route element={<ProtectedRoute isLoggedIn={isLoggedIn} redirectPath={'/'} token={token} />}>
+          <Route path='login' element={<Login />} />
+          <Route path='signup' element={<SignUp />} />
+        </Route> */}
+        <Route path='login' element={<Login />} />
+        <Route path='signup' element={<SignUp />} />
+        <Route element={<ProtectedRoute redirectPath={'/signup'} token={token} />}>
+          <Route path="/" element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </>
   );
 }
 

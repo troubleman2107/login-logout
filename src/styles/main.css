@@ -1,0 +1,135 @@
+.form-label {
+    color: #6E6B7B;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.required {
+    color: red;
+}
+
+.submit_button {
+    width: 100%;
+    background-color: #7367F0;
+    border: none;
+}
+
+.submit_button:hover {
+    background-color: #6780f0;
+}
+
+.component__pages .left_section {
+    background-color: #F8F8F8;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.component__pages .left_section img {
+    width: 60%;
+}
+
+.component__pages .sign_up_form {
+    margin-top: 30px;
+}
+
+
+.component__pages .right_section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    padding: 300px 70px;
+}
+
+.component__pages .right_section .main_title{
+    font-weight: 500;
+    size: 18px;
+    line-height: 21.94px;
+    color: #5E5873;
+}
+
+.component__pages .right_section .sub_title{
+    font-weight: 400;
+    size: 14px;
+    line-height: 21px;
+    color: #6E6B7B;
+}
+
+.component__dashboard {
+    background: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 120px 300px;
+}
+
+.component__dashboard img {
+    width: 60%;
+}
+
+.component__header {
+    position: relative;
+}
+
+.component__header .log-out{
+    position: absolute;
+    right: 10px;
+} 
+
+.component__header .log-out button {
+    padding-left: 60px;
+    background-color: #FFF;
+    color: #6E6B7B;
+    border: 1px solid #E9EAEB;
+    border-radius: 4px;
+    padding-right: 0px;
+}
+
+.component__header .log-out button img {
+    width: 17%;
+    margin-left: 10px;
+}
+
+
+
+.component__dashboard h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29.26px;
+    color: #5E5873;
+}
+
+.component__header-user {
+    display: flex;
+    justify-content: end;
+}
+
+.component__header-user .user-avatar {
+    width: 5%;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #6E6B7B;
+}
+
+.user-status {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #B9B9C3;
+}
